@@ -12,12 +12,25 @@ void permutare_circulara_dreapta(int *n, int *m, int v[][100], int pas, int lini
     }
 }
 
+void permutare_circulara_stanga(int *n, int *m, int v[][100], int pas, int linie)
+{
+    int i, j, temp = 0;
+    for(i = 0; i < pas + 1; i++)
+    {
+        temp = v[linie][0];
+        for(j = 0; j < (*n) - 1; j++)
+            v[linie][j] = v[linie][j + 1];
+        v[linie][j] = temp;
+    }
+}
+
 void matrice_schimbata(int *n, int *m, int a[][100])
 {
     int i, j;
     for(i = 0; i < (*n); i++)
     {
-        permutare_circulara_dreapta(n, m, a, i, i);
+        // permutare_circulara_dreapta(n, m, a, i, i);
+        permutare_circulara_stanga(n, m, a, i, i);
     }
 }
 
