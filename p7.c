@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<stdbool.h>
 
 bool paritate(unsigned int n)
@@ -34,5 +35,5 @@ int main()
     for(i = 0; i < size_impar; i++)
         printf("%u ", impar[i]);
     printf("\n");
-    return 0;
+    return EXIT_SUCCESS;
 }
