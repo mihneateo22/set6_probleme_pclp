@@ -24,11 +24,11 @@ int main()
 {
     unsigned int n, v[100], i, maxi;
     printf("introduceti dimensiunea vectorului : ");
-    scanf("%d", &n);
+    scanf("%u", &n);
     printf("introduceti valorile vectorului : ");
     for(i = 0; i < n; i++)
-        scanf("%d", &v[i]);
+        scanf("%u", &v[i]);
     maxim_impar(n, v, paritate, &maxi);
-    printf("maximul impar din vector este : %d\n", maxi);
+    printf("maximul impar din vector este : %u\n", maxi);
     return 0;
 }
